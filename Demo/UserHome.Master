@@ -1,0 +1,197 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserHome.master.cs" Inherits="Demo.UserHome" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title> side bar</title>
+    <link href="Datatabels/css/jquery.dataTables.min.css" rel="stylesheet" />  
+     <link href="fontawesome/css/all.css" rel="stylesheet" />
+    
+     <link href="fontawesome/css/all.min.css" rel="stylesheet" />
+   <%-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>--%>
+    <%--<link href="UserHomemaster.css" rel="stylesheet" />--%>
+         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="Dashbord2.css" rel="stylesheet" />
+
+    <script src="Bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="Bootstrap/js/popper.min.js"></script>
+    <script src="Bootstrap/js/bootstrap.min.js"></script>
+   
+    
+    <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+   
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+     <form id="form1" runat="server">
+        <%--<div>
+             <div>
+            <nav>
+            <ul>
+                <li>
+                    <a href="#" class="logo">
+                        <img  width="100px"src="images/profile.jpg" />
+                        <span class="nav-item">Hello USER</span>
+                    </a>
+                </li>
+               <li><a href="TourUserHomePage.aspx">
+                    <i class="fas fa-home"></i>
+                    <span class="nav-item">Home</span>
+                </a></li>
+                <li><a href="TourUserEditProfile.aspx">
+                    <i class="fas fa-user"></i>
+                    <span class="nav-item"> Edit Profile</span>
+                </a></li>
+                <li><a href="UserViewPackage.aspx">
+                    <i class="fas fa-eye"></i>
+                    <span class="nav-item">ViewPackage</span>
+                </a></li>
+                <li><a href="TourUserBookPackage.aspx">
+                    <i class="fas fa-circle-dot"></i>
+                    <span class="nav-item">BookPackage</span>
+                </a></li>
+                <li><a href="TourFeedback.aspx">
+                    <i class="fas fa-message"></i>
+                    <span class="nav-item">FeedBack</span>
+                </a></li>
+                <li><a href="UserCancelPackage.aspx">
+                    <i class="fas fa-cog"></i>
+                    <span class="nav-item">Cancel</span>
+                </a></li>
+               <%-- <li><a href="#">
+                    <i class="fas fa-question-circle"></i>
+                    <span class="nav-item">Help</span>
+                </a></li>--%>
+               <%-- <li><a href="Tour Home.aspx" class="logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="nav-item">Logout</span>
+                </a></li>
+                
+            </ul>
+        </nav>
+
+        </div>--%>
+   <%--     <div class="sidebar">
+            <div class="logo_content">
+                <div class="logo">
+                    <i class='bx bxl-postgresql'></i>
+                 <div class="logo_name">CodingLab</div>
+            </div>
+            <i class='bx bx-menu' id="btn" ></i>
+            </div>
+            <ul class="nav_list">
+               
+                <li>
+                    <a href="TourUserHomePage.aspx" >
+                    <i class='bx bx-grid-alt' ></i>
+                    <span class="links_name">Home</span>
+                </a>
+                <span class="tooltip">Home</span>
+                </li>
+                <li>
+                    <a href="TourUserEditProfile.aspx" >
+                    <i class='bx bx-user' ></i>
+                    <span class="links_name">Edit Profile</span>
+                </a>
+                <span class="tooltip">Edit Profile</span>
+                </li>
+                <li>
+                    <a href="UserViewPackage.aspx" >
+                    <i class='bx bx-chat' ></i>
+                    <span class="links_name">View Package</span>
+                </a>
+                <span class="tooltip">View Package</span>
+                </li>
+                <li>
+                    <a href="TourUserBookPackage.aspx" >
+                    <i class='bx bx-pie-chart-alt-2' ></i>
+                    <span class="links_name">Book Package</span>
+                </a>
+                <span class="tooltip">Book Package</span>
+                </li>
+                <li>
+                    <a href="TourFeedback.aspx" >
+                    <i class='bx bx-folder' ></i>
+                    <span class="links_name">Feedback</span>
+                </a>
+                <span class="tooltip">Feedback</span>
+                </li>
+                <li>
+                    <a href="UserCancelPackage.aspx" >
+                    <i class='bx bx-cart-alt' ></i>
+                    <span class="links_name">View Booking</span>
+                </a>
+                <span class="tooltip">View Booking</span>
+                </li>
+               <%-- <li>
+                    <a href="#" >
+                    <i class='bx bx-heart' ></i>
+                    <span class="links_name">Saved</span>
+                </a>
+                <span class="tooltip">Saved</span>
+                </li>
+                <li>
+                    <a href="#" >
+                    <i class='bx bx-cog' ></i>
+                    <span class="links_name">Setting</span>
+                </a>
+                <span class="tooltip">Setting</span>
+                </li>--%>
+          <%--  </ul>
+            <div class="profile_content">
+                <div class="profile">
+                    <div class="profilr_details">
+                        <!-- <img src="Image/profilr.jpg" alt=""> -->
+                    </div>
+                    <a href="Tour Home.aspx" >
+                    <i class='bx bx-log-out' id="log_out" ></i>
+                        </a>
+                </div>
+            </div>
+        </div>
+       
+        <script>
+            let btn=document.querySelector('#btn');
+            let sidebar=document.querySelector('.sidebar');
+           
+
+            btn.onclick=function(){
+                sidebar.classList.toggle("active");
+                
+            }
+
+        </script>--%>
+   <%-- --%>
+           <input type="checkbox" id="check" />
+        <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="cancel"></i>
+        </label>
+       <div class="sidebar">
+           <header>Hello User</header>
+           <ul>
+               <li><a href="TourUserHomePage.aspx"><i class="fas fa-house"></i> Home</a></li>
+               <li><a href="TourUserEditProfile.aspx"><i class="fas fa-circle-user"></i>Edit Profile</a></li>
+               <li><a href="UserViewPackage.aspx"><i class="fas fa-light fa-folder"></i>View Package</a></li>
+               <li><a href="TourUserBookPackage.aspx"><i class="fas fa-book"></i>Book Package</a></li>
+               <li><a href="TourFeedback.aspx"><i class="fas fa-comments"></i>Feedback</a></li>
+               <li><a href="UserCancelPackage.aspx"><i class="fa-solid fa-eye"></i>View Booking</a></li>
+              
+               <li><a href="Tour Home.aspx"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+           </ul>
+
+       </div>
+        <section>
+
+        </section>
+        
+   
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
+            </asp:ContentPlaceHolder>
+       <%-- </div>--%>
+    </form>
+</body>
+</html>

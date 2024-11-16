@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TourAdminHome.master.cs" Inherits="Demo.TourAdminHome" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="Dashbord2.css" rel="stylesheet" />
+
+
+    <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Datatabels/css/jquery.dataTables.min.css" rel="stylesheet" />  
+     <link href="fontawesome/css/all.css" rel="stylesheet" />   
+     <link href="fontawesome/css/all.min.css" rel="stylesheet" />
+    <script src="Bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="Bootstrap/js/popper.min.js"></script>
+    <script src="Bootstrap/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <input type="checkbox" id="check" />
+        <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="cancel"></i>
+        </label>
+       <div class="sidebar">
+           <header>Hello ADMIN</header>
+           <ul>
+               <li><a href="TourAdminHome.aspx"><i class="fas fa-house"></i> Home</a></li>
+               <li><a href="TourAdminAddPackage.aspx"><i class="fas fa-circle-dot"></i>Add Package</a></li>
+               <li><a href="TourAdminEditPackage.aspx"><i class="fas fa-file-pen"></i>Edit Package</a></li>
+               <li><a href="TourAdminViewUserDetails.aspx"><i class="fas fa-users"></i>View User</a></li>
+               <li><a href="TourViewBookingData.aspx"><i class="fas fa-circle-dot"></i>View Booking</a></li>
+               <li><a href="TourAdminViewPayment.aspx"><i class="fa-solid fa-credit-card"></i>View Payment</a></li>
+               <li><a href="TourAdminViewFeedback.aspx"><i class="fas fa-comment"></i>View FeedBack</a></li>
+               <li><a href="AdminRefund.aspx"><i class="fa-solid fa-indian-rupee-sign"></i></>Refund</a></li>
+               <li><a href="TourReport.aspx"><i class="fa-solid fa-book"></i></> Booking Report</a></li>
+               <li><a href="Tour Home.aspx"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+           </ul>
+
+       </div>
+        <section>
+
+        </section>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
